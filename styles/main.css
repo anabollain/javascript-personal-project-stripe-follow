@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+body {
+    /*General properties*/
+    margin: 0;
+    min-height: 100vh;
+    background-color: #00000062;
+}
+
+.header__title{
+    /*General properties*/
+    padding: 30px;
+}
+
+nav ul {
+    /*General properties*/
+    list-style: none;
+    /*Display*/
+    display: flex;
+    justify-content: center;
+}
+
+.header__nav--list>li>a {
+    /*General properties*/
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: black;
+    padding: 10px 25px;
+    border-radius: 25px;
+    margin: 20px;
+    /*Display*/
+    display: inline-block;
+}
+
+.header__nav--list>li {
+    /*Position*/
+    position: relative;
+    /*Display*/
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown {
+    /*General properties*/
+    opacity: 0;
+    padding: 20px;
+    overflow: hidden;
+    /*Position*/
+    position: absolute;
+    top: -20px;
+    /*Transition*/
+    transition: all 0.5s;
+    transform: translateY(100px);
+    will-change: opacity;
+    /*Display*/
+    display: none;
+}
+
+.trigger-enter .dropdown {
+    /*Display*/
+    display: block;
+}
+
+.trigger-enter-active .dropdown {
+    /*General properties*/
+    opacity: 1;
+}
+
+.dropdownBackground {
+    /*General properties*/
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 50px 100px rgba(50, 50, 93, .1), 0 15px 35px rgba(50, 50, 93, .15), 0 5px 15px rgba(0, 0, 0, .1);
+    opacity: 0;
+    /*Transition*/
+    transition: all 0.3s, opacity 0.1s, transform 0.2s;
+    transform-origin: 50% 0;
+    /*Display*/
+    display: flex;
+    justify-content: center;
+}
+
+.dropdownBackground.open {
+    /*General properties*/
+    opacity: 1;
+}
+
+.dropdown__arrow {
+    /*General properties*/
+    width: 20px;
+    height: 20px;
+    background: white;
+    /*Position*/
+    position: absolute;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.bio {
+    /*General properties*/
+    min-width: 500px;
+    line-height: 1.7;
+}
+
+.bio img {
+    float: left;
+    margin-right: 20px;
+}
+
+.courses {
+    min-width: 300px;
+}
+
+.courses li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: #ffc600;
+}
+
+a.button {
+    color: white;
+    background: black;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Matches Twitter, TWITTER, twitter, tWitter, TWiTTeR... */
+.button[href*=twitter] {
+    background: #019FE9;
+}
+
+.button[href*=facebook] {
+    background: #3B5998;
+}
+
+.button[href*=courses] {
+    background: #ffc600;
+}
